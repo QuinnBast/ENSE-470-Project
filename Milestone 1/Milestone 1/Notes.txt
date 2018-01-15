@@ -1,0 +1,14 @@
+Software users must request access to specific components of the software to use based on their access.
+
+Steps:
+Software users request access to software tools by obtaining approval from a verified and unique software approver for the specific tool.
+	-This is done by getting the approver's signature, digital signature, or email approval.
+	-Users often don't know who the approver for the software tool is and go to the wrong people
+	-Users try to obtain approval from their managers but they are not authorized to give access
+Once approval is gained, the user's request is submitted to HELL IT Staff for vetting and processing
+HELL IT Staff recieves requests via email, fax and web
+	-Non web submitted documents usually lack information and require runbacks
+	-Vetting requires the IT Staff to confirm the user should have the access being requested
+	-Software approver names are held in two different files managed by two different teams
+	-All approvers on either list are verified. Analyst must search both files as some are duplicated or ommitted in the two files. Acronyms sometimes used
+After vetting is completed, approval is confirmed and the analyst processes the user's access. If approval is denied they have to resubmit.
