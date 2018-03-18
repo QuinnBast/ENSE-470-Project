@@ -23,7 +23,7 @@ if(isset($_SESSION['username']) && !is_null($_SESSION['username']) && isset($_SE
 		<ul class="nav navbar navbar-right">
 			<li><a href="/pages/approvers.php">View Approvers</a></li>
 			<li><a href="/pages/dash.php">My Approvals</a></li>
-			<li><a href="/pages/signup.php">Submit Request</a></li>
+			<li><a href="/pages/submit.php">Submit Request</a></li>
 			<li><a href="/php/logout.php">Logout</a></li>
 		</ul>
 		<?php
@@ -32,7 +32,7 @@ if(isset($_SESSION['username']) && !is_null($_SESSION['username']) && isset($_SE
 		<ul class="nav navbar navbar-right">
 			<li><a href="/pages/approvers.php">View Approvers</a></li>
 			<li><a href="/pages/dash.php">My Approvals</a></li>
-			<li><a href="/pages/signup.php">Submit Request</a></li>
+			<li><a href="/pages/submit.php">Submit Request</a></li>
 			<li><a href="/php/logout.php">Logout</a></li>
 		</ul>
 		<?php

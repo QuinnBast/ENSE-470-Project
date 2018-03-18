@@ -1,28 +1,24 @@
 <?php
 
-include "database/dbConnect.php";
+include "php/database/dbConnect.php";
+
 $SoftwareSql = "SELECT * FROM Software";
 $SoftwareResult = $conn->query($SoftwareSql);
 
 ?>
-<div class="container">
-<div class="container" style="padding-top: 30px;">
-<table class="table table-border">
+<table border="1">
 <tr>
-	<th>Acronym</th>
 	<th>Software Name</th>
 	<th>Employee Name</th>
 </tr>
 
 <?php
+
 if ($SoftwareResult->num_rows > 0) {
     // output data of each row
     while($row = $SoftwareResult->fetch_assoc()) {
 		$tmp = 1;
 		echo "<tr>";
-		echo "<td>";
-		echo "" . $row["software_acronym"];
-		echo "</td>";
 		echo "<td>";
 		echo "" . $row["software_name"];
 		echo "</td>";
@@ -43,8 +39,6 @@ if ($SoftwareResult->num_rows > 0) {
 					echo "<td>";
 					echo "</td>";
 					echo "<td>";
-					echo "</td>";
-					echo "<td>";
 					echo $EmpRow["employee_name_prefix"] . " " . $EmpRow["employee_first_name"] . " " . $EmpRow["employee_middle_name"] . " " . $EmpRow["employee_last_name"];
 					echo "</td>";
 					echo "</tr>";
@@ -61,6 +55,5 @@ if ($SoftwareResult->num_rows > 0) {
 
 ?>
 </table>
-</div>
-</div>
 <?php
+$conn->close();
