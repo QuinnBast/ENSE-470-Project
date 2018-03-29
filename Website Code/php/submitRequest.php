@@ -14,9 +14,9 @@ if(isset($_SESSION['employee_id'])
 	echo $sql;
 	if($conn->query($sql) === TRUE){
 		$insertId = $conn->insert_id;
-		
+		$comment = mysqli_real_escape_string($conn, $_POST['comment']);
 		//Create comment section and forward to proper approver.
-		$sql = "INSERT INTO ApprovalComments (request_pk, approver_pk, approver_comments, status) VALUES (" . $insertId . ", " . $employee_id . ", '" . $_POST['comment'] . "', 'Forward')";
+		$sql = "INSERT INTO ApprovalComments (request_pk, approver_pk, approver_comments, status) VALUES (" . $insertId . ", " . $employee_id . ", '" . $comment . "', 'Forward')";
 		if($conn->query($sql) === TRUE){
 			$commentId = $conn->insert_id;
 			$sql = "UPDATE ApprovalComments SET next_comment_pk = " . $commentId + 1 . " WHERE comment_pk = " . $commentId;
